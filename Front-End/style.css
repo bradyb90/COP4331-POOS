@@ -11,6 +11,7 @@ body {
 body {
    
     background: url(images/body-bg.gif) center top #37271c;
+    background-size: 50px 50px;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 100%;
     line-height: 1.125em;
