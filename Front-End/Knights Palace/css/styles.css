@@ -26,3 +26,12 @@ h1 {
 .carousel-caption {
     vertical-align: middle
 }
+
+.box {
+    background-color: saddlebrown;
+    width: 300px;
+    border: 25px solid gold;
+    padding: 25px;
+    margin: 25px;
+}
+
