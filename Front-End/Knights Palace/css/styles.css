@@ -1,40 +1,28 @@
-body {background-color: black}
+body {background-color: dimgray}
 
 h1 {
     color: gold;
-    font-family: Georgia, serif;
 }
 
-h2 {
-    color: gray;
-    font-family: Georgia, sans-serif;
+.carousel img#photo1 {
+	height: 300px;
+    width: 600px;
 }
 
-p {
-    color: white;
-    font-family: verdana;
+.carousel img#photo2 {
+	height: 300px;
+    width: 600px;
 }
 
-.header a#homelogo {
-	left:0;
-	position:absolute;
-	top:1;
+.carousel img#photo3 {
+	height: 300px;
+    width: 600px;
 }
 
-.log {
-    float: right;
-    top: 0;
+.carousel-inner h3 {
+    color: gold;
 }
 
-.header li {
-    color: gray;
-    display: inline-block;
-    vertical-align: middle;
-    padding: inherit;
-}
-
-.body .home div.featured img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.carousel-caption {
+    vertical-align: middle
 }

@@ -10,51 +10,74 @@
   <title>Knights Palace</title>
   </head>
   <body>
-      <div class="page">
-          <div class="header" role="banner">
-            <h1>Knights Palace</h1>
-                <a href="palace.html" id="homelogo"><img src ="images/homelogo.jpeg" class="img-circle" alt="logo" height="70" width="70"></a>
-              <div>
-                  <div class="log">
-                    <a href="signup.html">Sign Up</a> <span>|</span> <a href="login.html">Log-in</a>
-                  </div>
-                  <div>
-                      <nav role="navigation">
-                          <ul>
-                              <li>
-                                  <a href="palace.html" title="Home"><span>Home</span></a>
-                              </li>
-                              <li>
-                                  <a href="knightup.html" title="About Us!"><span>Knight Up!</span></a>
-                              </li>
-                              <li>
-                                  <a href="contact.html" title="Contact"><span>Contact</span></a>
-                              </li>
-                          </ul>
-                      </nav>
-                  </div>
-              </div>
-          </div>
+     
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" 
+                class="navbar-toggle collapsed" 
+                data-toggle="collapse"
+                data-target="#collapsemenu"
+                aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      <a href="palace.html" class="navbar-brand">
+       Knight's Palace
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="collapsemenu">
+      <ul class="nav navbar-nav">
+      <li><a href="palace.html">Home</a></li>
+      <li><a href="knightup.html">Knight Up!</a></li>
+      <li><a href="contacts.html">Contacts</a></li><li><a href="#">Services</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+      </div>  
+  </div>
+</nav>     
+     
+<h1 align="center">Welcome Sleep Deprived Software Engineers!</h1>
+
+<div class="content container">
+  <div class="row">
+    <section class="col-sm-12">
     
-    <div class="body">
-        <div class="home">
-            <div class="featured">
-                <img src="images/featuredpalace.jpg">
-                <div>
-                    <p>Log in yo!</p>
+    <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+           <div class="item active">
+                <img src="images/fountain.jpg" class="img-rounded center-block" alt="" id="photo1">
+                <div class="carousel-caption">
+                    <h3>Sleep</h3>
+                </div>
+           </div>
+            <div class="item">
+                <img src="images/HECnight.jpg" class="img-rounded center-block" alt="" id="photo2">
+                <div class="carousel-caption">
+                    <h3>All day</h3>
                 </div>
             </div>
-            <div class="section">
-                <div>
-                    <h4>Insert More Stuff here</h4>
-                    <p>
-                        Ching chong chicken in china! Bing Bang Attack! Just a random Asian paragraph. Ignore this shit.
-                    </p>
+            <div class="item">
+                <img src="images/HEC.jpg" class="img-rounded center-block" alt="" id="photo3">
+                <div class="carousel-caption">
+                    <h3>Everyday!</h3>
                 </div>
             </div>
         </div>
     </div>
+    
+    
+     </section>
+  </div><!-- row -->   
+</div><!-- content container -->
 
+<div id="content">
+    <div class="container">
+        
+    </div>
 </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
