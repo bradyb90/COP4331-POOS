@@ -7,6 +7,17 @@
   <meta name="Hotel Management" content="Main page">
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/styles.css">
+      <script type="text/jscript">
+      function processData(f1,f2,f3,f4,f5,f6) {
+        var v1 = document.getElementById(f1).value;
+        var v2 = document.getElementById(f2).value;
+        var v3 = document.getElementById(f3).value;
+        var v4 = document.getElementById(f4).value;
+        var v5 = document.getElementById(f5).value;
+        var v6 = document.getElementById(f6).value;
+        alert(v1+)
+      }
+      </script>
   <title>Knight's Palace</title>
   </head>
   <body>
@@ -54,16 +65,16 @@
                     <h3>Sleep</h3>
                 </div>
            </div>
-            <div class="item">
-                <img src="images/HECnight.jpg" class="img-rounded center-block" alt="" id="photo2">
+           <div class="item">
+                <img src="images/HEC.jpg" class="img-rounded center-block" alt="" id="photo2">
                 <div class="carousel-caption">
                     <h3>All day</h3>
                 </div>
             </div>
             <div class="item">
-                <img src="images/HEC.jpg" class="img-rounded center-block" alt="" id="photo3">
+                <img src="images/HECnight.jpg" class="img-rounded center-block" alt="" id="photo3">
                 <div class="carousel-caption">
-                    <h3>Everyday!</h3>
+                    <h3>All night!</h3>
                 </div>
             </div>
         </div>
@@ -77,53 +88,30 @@
 <div id="content">
     <div class="container">
         <div class="box">
-            <h3>Reserve now!</h3>
+            <h3 style="margin-top: -10px;">Reserve now!</h3>
             <form action="reservation-form">
-                <fieldset>
-                   <div class="container">
-    <div class="row">
-        <div class='col-sm-2'>
-           <label>Check in:</label>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                <div class="container">
+                    <div class="row">
+                        <div class='col-sm-2'>
+                        <label>Check in:</label>
+                        <input type='date' id="date1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-sm-2'>
+                        <label>Check out:</label>
+                        <input type='date' id="date2"/>
+                        </div>
+                    </div>
+                   <input type="submit" value="Submit" style="margin-top: 10px;">  
                 </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-    </div>
-    <div class="row">
-        <div class='col-sm-2'>
-           <label>Check out:</label>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-    </div>
-    
-</div>
-                </fieldset>
             </form>
         </div>
     </div>
 </div>
+    
+    
+    
     
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
