@@ -22,3 +22,7 @@ h1 {
 .carousel-inner h3 {
     color: gold;
 }
+
+.carousel-caption {
+    vertical-align: middle
+}
