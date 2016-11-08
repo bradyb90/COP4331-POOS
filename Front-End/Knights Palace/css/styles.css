@@ -5,20 +5,24 @@ h1 {
 }
 
 .carousel img#photo1 {
-	height: 300px;
-    width: 600px;
+	height: 600px;
+    width: 1200px;
 }
 
 .carousel img#photo2 {
-	height: 300px;
-    width: 600px;
+	height: 600px;
+    width: 1200px;
 }
 
 .carousel img#photo3 {
-	height: 300px;
-    width: 600px;
+	height: 600px;
+    width: 1200px;
 }
 
+.container img#staff {
+    height: 500px;
+    width: 900px;
+}
 .carousel-inner h3 {
     color: gold;
 }
@@ -28,9 +32,29 @@ h1 {
 }
 
 .box {
-    background-color: saddlebrown;
+    background-color: grey;
     width: 300px;
-    border: 25px solid gold;
+    border: 20px solid gold;
     padding: 25px;
-    margin: 25px;
+    margin: 25px; 
 }
+
+.wrapper {
+    width: 100%;
+    overflow: hidden
+}
+
+#content .indent {
+    padding-right: 200px;
+}
+
+.footer {
+            padding: 15px 0px 10px 0px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #fff;
+            background-color: #222;
+            border-color: #080808;          
+}
+  

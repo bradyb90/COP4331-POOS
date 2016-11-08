@@ -5,24 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=width=device-width, initial-scale=1">
   <meta name="Hotel Management" content="Main page">
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="css/styles.css">
-      <script type="text/jscript">
-      function processData(f1,f2,f3,f4,f5,f6) {
-        var v1 = document.getElementById(f1).value;
-        var v2 = document.getElementById(f2).value;
-        var v3 = document.getElementById(f3).value;
-        var v4 = document.getElementById(f4).value;
-        var v5 = document.getElementById(f5).value;
-        var v6 = document.getElementById(f6).value;
-        alert(v1+)
-      }
-      </script>
-  <title>Knight's Palace</title>
+  <title>Knight's Palace</title>  
   </head>
   <body>
      
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
         <button type="button" 
@@ -43,16 +33,17 @@
       <ul class="nav navbar-nav">
       <li><a href="palace.html">Home</a></li>
       <li><a href="knightup.html">Knight Up!</a></li>
-      <li><a href="contacts.html">Contacts</a></li><li><a href="#">Services</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="#">Testimonials</a></li>
-      <li><a href="login.html">Login</a></li>
-    </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login/Signup</a></li>
+      </ul>
       </div>  
   </div>
 </nav>     
      
-<h1 align="center">Welcome!</h1>
-
+<h1 style="padding-top: 50px;">Welcome Knight!</h1>
 <div class="content container">
   <div class="row">
     <section class="col-sm-12">
@@ -60,34 +51,33 @@
     <div class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
            <div class="item active">
-                <img src="images/fountain.jpg" class="img-rounded center-block" alt="" id="photo1">
+                <img src="images/hotelfront.jpg" class="img-rounded center-block" alt="" id="photo1">
                 <div class="carousel-caption">
                     <h3>Sleep</h3>
                 </div>
            </div>
            <div class="item">
-                <img src="images/HEC.jpg" class="img-rounded center-block" alt="" id="photo2">
+                <img src="images/bedroom.jpg" class="img-rounded center-block" alt="" id="photo2">
                 <div class="carousel-caption">
                     <h3>All day</h3>
                 </div>
             </div>
             <div class="item">
-                <img src="images/HECnight.jpg" class="img-rounded center-block" alt="" id="photo3">
+                <img src="images/luxpool.jpg" class="img-rounded center-block" alt="" id="photo3">
                 <div class="carousel-caption">
                     <h3>All night!</h3>
                 </div>
             </div>
         </div>
     </div>
-    
-    
      </section>
   </div><!-- row -->   
 </div><!-- content container -->
 
 <div id="content">
-    <div class="container">
-        <div class="box">
+    <div class="wrapper">
+        <div class="inner" style="padding-left: 30px;">
+            <div class="box col-sm-6" style="padding-right: 25px;">
             <h3 style="margin-top: -10px;">Reserve now!</h3>
             <form action="reservation-form">
                 <div class="container">
@@ -103,18 +93,36 @@
                         <input type='date' id="date2"/>
                         </div>
                     </div>
-                   <input type="submit" value="Submit" style="margin-top: 10px;">  
+                    <div class="field" style="margin-top: 5px;">Persons:
+                    <input type="text" style="width: 15px;" value="1"/>&nbsp; Rooms:&nbsp;<input type="text" style="width: 15px;" value="1"/>
+                    </div>
+                   <input type="submit" value="Check Availability" style="margin-top: 10px;">  
                 </div>
             </form>
+          </div>
+          <div class="content col-sm-5">
+               <div class="inden">
+                <h2>Come Find Us!</h2>
+                    <iframe
+                      width="800"
+                      height="250"
+                      frameborder="0" style="border:0"
+                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAPxZ8u5P5g_nEdauQeYhEQ9bQum3jViYQ
+                        &q=UCF,Orlando+FL" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-    
-    
-    
-    
+<footer class="footer">
+    <div class="container">
+        <p class="">&copy; 2016 Team21. | <a href="http://www.cs.ucf.edu/~turgut/COURSES/COP4331C_OOD_Fall16/COP4331C_OOD_Fall16.html">COP4331C POOS Class </a></p>
+    </div>
+</footer>
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="js/script.js"></script>
   </body>
 </html>
