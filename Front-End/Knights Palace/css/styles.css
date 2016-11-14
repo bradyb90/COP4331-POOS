@@ -4,25 +4,48 @@ h1 {
     color: gold;
 }
 
+h3 {
+    color: white;
+}
+
+p {
+    color: gold;
+}
+
+#jumbo {
+    background-color: gray;
+}
+
 .carousel img#photo1 {
 	height: 600px;
     width: 1200px;
+    max-width: 100%;
 }
 
 .carousel img#photo2 {
 	height: 600px;
     width: 1200px;
+    max-width: 100%;
 }
 
 .carousel img#photo3 {
 	height: 600px;
     width: 1200px;
+    max-width: 100%;
 }
 
 .container img#staff {
     height: 500px;
     width: 900px;
+    max-width: 100%;
 }
+
+.container-fluid img#galpic {
+    height: 160px;
+    width: 300px;
+    width: 100%;
+}
+
 .carousel-inner h3 {
     color: gold;
 }
