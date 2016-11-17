@@ -43,7 +43,7 @@ p {
 .container-fluid img#galpic {
     height: 160px;
     width: 300px;
-    width: 100%;
+    max-width:  width: 100%;
 }
 
 .carousel-inner h3 {
@@ -80,4 +80,13 @@ p {
             background-color: #222;
             border-color: #080808;          
 }
-  
+
+.form {
+  background: rgba(0, 0, 0, 1);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
