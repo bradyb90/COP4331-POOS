@@ -1,0 +1,25 @@
+<h2>Change user permisson</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<form method="post" action="/users/changepermission">
+	<div class="form-group">
+		<label>Account Username</label>
+		<input type="text" class="form-control" name="username" placeholder="username">
+	</div>
+	<div class="form-group">
+		<label>Account permission</label><br>
+		<div class="form-group">
+			<label><input type="radio" name="permission" id="1" value="1" checked>1</label>
+		</div>
+		<div class="form-group">	
+			<label><input type="radio" name="permission" id="2" value="2" checked>2</label>
+		</div>
+		<div class="form-group">
+			<label><input type="radio" name="permission" id="3" value="3" checked>3</label>
+		</div>
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>

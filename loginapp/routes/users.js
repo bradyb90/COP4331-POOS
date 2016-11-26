@@ -4,8 +4,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 var User = require('../models/user');
-
-var Reservation = require('../models/reservation');
+	
 
 // Register
 router.get('/register', function(req, res){
@@ -18,10 +17,104 @@ router.get('/login', function(req, res){
 });
 
 //book
-router.get('/book', function(req, res){
+router.get('/book', loggedIn, function(req, res){
 	res.render('book');
 });
 
+//creating manager and receptionist accounts
+router.get('/changepermission', isManager, function(req,res){
+	res.render('changepermission');
+});
+
+//checking in and out
+router.get('/checkin', isReceptionist, function(req,res){
+	res.render('checkin');
+});
+
+//check to see if user is at least a receptionist
+function isReceptionist(req, res, next){
+	if(req.app.locals.user.accountlevel == '3' || req.app.locals.user.accountlevel == '2'){
+		return next();
+	}else{
+		res.redirect('login');
+	}
+}
+
+//check manager permissions
+function isManager(req, res, next){
+	if(req.app.locals.user.accountlevel == '3'){
+		return next();
+	}else{
+		res.redirect('login');
+	}
+}
+//check to see if a user is logged in
+function loggedIn(req, res, next){
+
+	if(req.app.locals.user != null){
+		return next();
+	}else{
+		res.redirect('login');
+	}
+
+}
+
+//checkin
+router.post('/checkin', function(req,res){
+	var username = req.body.username;
+	var check;
+
+	req.checkBody('username', 'user required').notEmpty();
+
+	var errors = req.validationErrors();
+
+	if(errors){
+		res.render('checkin', {
+			errors: errors
+		});
+	}else{
+		User.findOne( {username: username}, function(err, result){
+			if(result.status == 'checkedout'){
+				result.status = 'checkedin';
+			}else{
+				result.status = 'checkedout';
+			}
+			result.save();
+		});
+	}
+
+	req.flash('success_msg', username + ' status change complete' );	
+
+	res.redirect('/');
+
+});
+
+//change permissions
+router.post('/changepermission', function(req, res){
+	
+	var newlevel = req.body.permission;
+	var username = req.body.username;
+
+	req.checkBody('username', 'user required').notEmpty();
+
+	var errors = req.validationErrors();
+
+	if(errors){
+		res.render('changepermission', {
+			errors: errors
+		});
+	}else{
+		User.findOne( {username: username}, function(err, result){
+			result.accountlevel = newlevel;
+			result.save();
+		});
+	}
+		
+		req.flash('success_msg', 'you have changed permission');
+
+		res.redirect('/');
+
+});
 
 //make reservation
 router.post('/book', function(req, res){
@@ -38,37 +131,15 @@ router.post('/book', function(req, res){
 
 	var errors = req.validationErrors();
 
-	console.log(req.app.locals.user.username);
-	console.log(typeof(req.app.locals.user.username));
-
 	if(errors){
 		res.render('book', {
 			errors : errors
 		});
 	}else {
-
-
  		User.findOne( {username: username}, function(err,result){
-
 			result.reservation = {startdate: startdate, enddate: enddate, occupants: occupants, roomtype: roomtype};
 			result.save();
-
 		});
-
-
-
-		// var newReservation = new Reservation({
-		// 	username : req.app.locals.user.username,
-		// 	startdate : startdate,
-		// 	enddate : enddate,
-		// 	occupants : occupants,
-		// 	roomtype : roomtype
-		// });
-	
-		// Reservation.createReservation(newReservation, function(err, reservation){
-		// 	if(err) throw err;
-		// 	console.log(reservation);
-		// });
 		
 		req.flash('success_msg', 'you have a made a reservation');
 

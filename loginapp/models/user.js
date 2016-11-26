@@ -22,7 +22,8 @@ var UserSchema = mongoose.Schema({
 			occupants: { type: String, default: 'none'},
 			roomtype: { type: String, default: 'none'} 
 		},
-	accountlevel: { type: Number, default: 1 }
+	accountlevel: { type: String, default: '1' },
+	status: {type: String, default: 'checkedout'}
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);
@@ -53,6 +54,7 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
 }
 
 
-module.exports.edditReservation = function(){
+module.exports.isManager = function(){
+	
 	
 }
