@@ -86,3 +86,102 @@ body {
 footer{
   margin-top:40px;
 }
+
+body {background-color: dimgray}
+
+h1 {
+    color: gold;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: gold;
+}
+
+#jumbo {
+    background-color: gray;
+}
+
+.carousel img#photo1 {
+	height: 600px;
+    width: 1200px;
+    max-width: 100%;
+}
+
+.carousel img#photo2 {
+	height: 600px;
+    width: 1200px;
+    max-width: 100%;
+}
+
+.carousel img#photo3 {
+	height: 600px;
+    width: 1200px;
+    max-width: 100%;
+}
+
+.container img#staff {
+    height: 500px;
+    width: 900px;
+    max-width: 100%;
+}
+
+.container-fluid img#galpic {
+    height: 160px;
+    width: 300px;
+    max-width:  width: 100%;
+}
+
+.carousel-inner h3 {
+    color: gold;
+}
+
+.carousel-caption {
+    vertical-align: middle
+}
+
+.box {
+    background-color: grey;
+    width: 300px;
+    border: 20px solid gold;
+    padding: 25px;
+    margin: 25px; 
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden
+}
+
+#content .indent {
+    padding-right: 200px;
+}
+
+.footer {
+    padding: 15px 0px 10px 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: #222;
+    border-color: #080808;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+.form {
+  background: rgba(0, 0, 0, 1);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
