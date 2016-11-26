@@ -29,6 +29,7 @@ router.post('/book', function(req, res){
 	var enddate = req.body.enddate;
 	var occupants = req.body.occupants;
 	var roomtype = req.body.roomtype;
+	var username = req.app.locals.user.name;
 
 	req.checkBody('startdate', 'startdate required').notEmpty();
 	req.checkBody('enddate', 'enddate required').notEmpty();
@@ -38,25 +39,36 @@ router.post('/book', function(req, res){
 	var errors = req.validationErrors();
 
 	console.log(req.app.locals.user.username);
-	console.log(typeof(req.app.locals.user));
+	console.log(typeof(req.app.locals.user.username));
 
 	if(errors){
 		res.render('book', {
 			errors : errors
 		});
 	}else {
-		var newReservation = new Reservation({
-			username : req.app.locals.user.username,
-			startdate : startdate,
-			enddate : enddate,
-			occupants : occupants,
-			roomtype : roomtype
+
+
+ 		User.findOne( {username: username}, function(err,result){
+
+			result.reservation = {startdate: startdate, enddate: enddate, occupants: occupants, roomtype: roomtype};
+			result.save();
+
 		});
+
+
+
+		// var newReservation = new Reservation({
+		// 	username : req.app.locals.user.username,
+		// 	startdate : startdate,
+		// 	enddate : enddate,
+		// 	occupants : occupants,
+		// 	roomtype : roomtype
+		// });
 	
-		Reservation.createReservation(newReservation, function(err, reservation){
-			if(err) throw err;
-			console.log(reservation);
-		});
+		// Reservation.createReservation(newReservation, function(err, reservation){
+		// 	if(err) throw err;
+		// 	console.log(reservation);
+		// });
 		
 		req.flash('success_msg', 'you have a made a reservation');
 

@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 // reservation schema
-var Reservation = mongoose.Schema({
+var ReservationSchema = mongoose.Schema({
 	username: {
 		type: String,
 		index: true
@@ -22,7 +22,7 @@ var Reservation = mongoose.Schema({
 
 
 
-var Reservation = module.exports = mongoose.model('Reservation', Reservation);
+var Reservation = module.exports = mongoose.model('Reservation', ReservationSchema);
 
 
 module.exports.createReservation = function(newReservation, callback){
