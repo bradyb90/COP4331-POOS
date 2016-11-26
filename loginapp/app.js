@@ -19,6 +19,9 @@ var users = require('./routes/users');
 
 // Init App
 var app = express();
+var manager = false;
+var receptionist = false;
+
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));

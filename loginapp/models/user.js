@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
+var manager = false;
+var receptionist = false;
+
 // User Schema
 var UserSchema = mongoose.Schema({
 	username: {
@@ -53,8 +56,3 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
 	});
 }
 
-
-module.exports.isManager = function(){
-	
-	
-}
