@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=width=device-width, initial-scale=1">
+  <meta name="Hotel Management" content="Main page">
+      <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+  <title>Knights Palace</title>  
+  </head>
+  <body>
+     
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      <a href="/palace.html" class="navbar-brand">Knight's Palace</a>
+    </div>
+    <div class="collapse navbar-collapse" id="collapsemenu">
+      <ul class="nav navbar-nav">
+        {{#if user}}
+          <li><a href="/users/book">Book</a></li>
+          <li><a href="/">Dashboard</a></li>
+        {{else}}
+
+        {{/if}}
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/events.html">Events</a></li>              
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#if user}}
+        <li><a href="/users/logout">Logout</a></li>
+        {{else}}
+          <li><a href="/users/register">Register</a></li>
+          <li><a href="/users/login">Login</a></li>
+        {{/if}}    
+      </ul>
+      </div>  
+  </div>
+</nav>
+     
+     
+<h1 style="padding-top: 45px;" align="center">Welcome Knights!</h1>
+<div class="content container">
+  <div class="row">
+    <section class="col-sm-12">
+    
+    <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+           <div class="item active">
+                <img src="images/hotelfront.jpg" class="img-rounded center-block" alt="" id="photo1">
+                <div class="carousel-caption">
+                    <h3>Sleep</h3>
+                </div>
+           </div>
+           <div class="item">
+                <img src="images/bedroom.jpg" class="img-rounded center-block" alt="" id="photo2">
+                <div class="carousel-caption">
+                    <h3>All day</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/luxpool.jpg" class="img-rounded center-block" alt="" id="photo3">
+                <div class="carousel-caption">
+                    <h3>All night!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+     </section>
+  </div><!-- row -->   
+
+
+<div class="row" style="padding-left:-200px; margin-bottom:100px;">
+    
+          <div class="content container col-sm-12">
+               <div>
+                <h3>Come Find Us!</h3>
+                    <iframe
+                      width="100%"
+                      height="250"
+                      frameborder="0" style="border:0"
+                      style="max-width:100%"
+                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAPxZ8u5P5g_nEdauQeYhEQ9bQum3jViYQ
+                        &q=UCF,Orlando+FL" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+</div>
+</div><!-- content container -->
+<footer class="footer" style="margin-top:100px;">
+        <div class="container">
+            <ul style="list-style: none;">
+              <li role="presentation" style="float: left;"><a href="http://www.cs.ucf.edu/~turgut/COURSES/COP4331C_OOD_Fall16/">&copy; 2016 Team21. | COP4331C UCF</a></li>
+              <li role="presentation" style="float: left;"><a href="/users/changepermission">&nbsp; Permissions</a></li>
+              <li role="presentation" style="float: left;"><a href="/users/checkin">&nbsp; Checkinout</a></li>
+            </ul>
+        </div>
+    </footer> 
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/script.js"></script>
+  </body>
+</html>

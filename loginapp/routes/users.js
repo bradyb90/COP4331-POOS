@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var path = require('path');
 
 var User = require('../models/user');
 	
@@ -31,12 +32,33 @@ router.get('/checkin', isReceptionist, function(req,res){
 	res.render('checkin');
 });
 
+//homepage
+router.get('/palace',  function(req,res){
+	res.sendFile(path.join(__dirname + '/palace.html'));
+});
+
+//gallery link to html page
+router.get('/gallery',  function(req,res){
+	res.sendFile(path.join(__dirname + '/gallery.html'));
+});
+
+//events
+router.get('/events',  function(req,res){
+	res.sendFile(path.join(__dirname + '/events.html'));
+});
+
+//services
+
+router.get('/palace',  function(req,res){
+	res.sendFile(path.join(__dirname + '/palace.html'));
+});
+
 //check to see if user is at least a receptionist
 function isReceptionist(req, res, next){
 	if(req.app.locals.user.accountlevel == '3' || req.app.locals.user.accountlevel == '2'){
 		return next();
 	}else{
-		res.redirect('login');
+		res.redirect('/');
 	}
 }
 
@@ -45,7 +67,7 @@ function isManager(req, res, next){
 	if(req.app.locals.user.accountlevel == '3'){
 		return next();
 	}else{
-		res.redirect('login');
+		res.redirect('/');
 	}
 }
 //check to see if a user is logged in
@@ -58,6 +80,27 @@ function loggedIn(req, res, next){
 	}
 
 }
+
+//delete user
+router.post('/deleteuser', function(req,res){
+	var username = req.body.username;
+
+	req.checkBody('username', 'username required').notEmpty();
+
+	var errors = req.validationErrors();
+
+	if(errors){
+		res.render('changepermission', {
+			errors: validationErrors
+		});
+	}else{
+		User.findOne({username: username}, function(err, result){
+			result.reservation = {startdate: none, enddate: none, occupants: none, roomtype: none};
+			result.save();
+		});
+	}
+
+});
 
 //checkin
 router.post('/checkin', function(req,res){

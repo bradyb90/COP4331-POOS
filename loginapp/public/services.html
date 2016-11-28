@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=width=device-width, initial-scale=1">
+  <meta name="Hotel Management" content="Main page">
+      <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+  <title>Knights Palace</title>
+  </head>
+  <body>
+   
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      <a href="/palace.html" class="navbar-brand">Knight's Palace</a>
+    </div>
+    <div class="collapse navbar-collapse" id="collapsemenu">
+      <ul class="nav navbar-nav">
+        <li class="loggedin"><a href="/users/book">Book</a></li>
+        <li class="loggedin"><a href="/">Dashboard</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/events.html">Events</a></li>              
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="loggedin"><a href="/users/logout">Logout</a></li>
+        <li class="loggedout"><a href="/users/register">Register</a></li>
+        <li class="loggedout"><a href="/users/login">Login</a></li>    
+      </ul>
+      </div>  
+  </div>
+</nav>    
+
+
+
+
+<script type="text/javascript">
+ 
+ function myFunction() {
+  
+  var elements = document.getElementsByClassName("loggedin");
+  for(var i = 0; i < elements.length; i++){
+    elements[i].style.display = 'none';
+  }
+}
+
+window.onload = myFunction;
+</script>
+
+  
+<div class="content container" style="padding-top: 50px;">
+  <div class="row" style="margin-bottom:100px;">
+    <section class="col-xs-12">
+    
+    <h1>Services</h1>
+        <div class="container" id="contactphoto">
+           <figure>
+               <img src="images/staff.jpg" class="img-rounded center-block" id="staff" style="max-width:100%;" alt="">
+               <figcaption style="padding-left: 125px;">Let us Assist you!</figcaption>
+           </figure>
+        </div>
+        
+        <div class="container text-center"><h2 col>Important Information</h2></div>
+        <div class="row" style="max-width=100%;">
+        <div class="container col-xs-4 text-center">
+            <h3>Contact Us:</h3>
+            <p>If you have any questions call us at 1-800-NAP-FOOD for more information. Do you have any issues that needs to be fixed or any complaints that needs to be addressed?
+            Call 1-800-GET-HELP.</p>
+        </div>
+        <div class="container col-xs-4 text-center">
+            <h3>Restaurant Times</h3>
+            <p>Breakfast:  6:00am to 11:00pm  <br/>
+            Lunch:  11:00am to 3:00pm <br/>
+            Dinner:  7:00pm to 11:00pm </p> 
+        </div>
+        <div class="container col-xs-4 text-center">
+            <h3>Transportation Service</h3>
+            <p>We offer transportation services to any tourist attractions around Orlando and to the airport.</p>
+        </div>
+        </div>
+        
+     </section>
+  </div><!-- row -->   
+</div><!-- content container -->
+
+<footer class="footer" style="margin-top:100px;">
+    <div class="container">
+        <p class="">&copy; 2016 Team21. | <a href="http://www.cs.ucf.edu/~turgut/COURSES/COP4331C_OOD_Fall16/COP4331C_OOD_Fall16.html">COP4331C POOS Class </a></p>
+    </div>
+</footer>    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="js/script.js"></script>
+  </body>
+</html>
