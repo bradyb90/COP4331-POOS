@@ -81,8 +81,8 @@ function loggedIn(req, res, next){
 
 }
 
-//delete user
 router.post('/deleteuser', function(req,res){
+
 	var username = req.body.username;
 
 	req.checkBody('username', 'username required').notEmpty();
@@ -91,14 +91,44 @@ router.post('/deleteuser', function(req,res){
 
 	if(errors){
 		res.render('changepermission', {
-			errors: validationErrors
+			errors: errors
 		});
 	}else{
 		User.findOne({username: username}, function(err, result){
-			result.reservation = {startdate: none, enddate: none, occupants: none, roomtype: none};
+			result.remove();
+		});
+	}
+
+
+	req.flash('success_msg', username + 's account has been deleted' );	
+
+	res.redirect('/changepermission');	
+
+});
+
+//delete user
+router.post('/deletereservation', function(req,res){
+	var username = req.body.username;
+
+	req.checkBody('username', 'username required').notEmpty();
+
+	var errors = req.validationErrors();
+
+	if(errors){
+		res.render('changepermission', {
+			errors: errors
+		});
+	}else{
+		User.findOne({username: username}, function(err, result){
+			result.reservation = {startdate: 'none', enddate: 'none', occupants: 'none', roomtype: 'none'};
 			result.save();
 		});
 	}
+
+
+	req.flash('success_msg', username + 's reservation has been canceled' );	
+
+	res.redirect('/changepermission');
 
 });
 

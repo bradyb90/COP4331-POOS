@@ -20,7 +20,7 @@ var UserSchema = mongoose.Schema({
 		type: String
 	},
 	reservation : {
-			startDate: { type: String, default: 'none' },
+			startdate: { type: String, default: 'none' },
 			enddate: { type: String, default: 'none'},
 			occupants: { type: String, default: 'none'},
 			roomtype: { type: String, default: 'none'} 
