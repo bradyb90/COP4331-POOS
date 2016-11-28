@@ -37,6 +37,24 @@ router.get('/viewreservation', isReceptionist, function(req,res){
 	res.render('/');
 });
 
+// //display user reservation
+// router.get('/place', function(req,res){
+
+// 	var username = req.body.getUserByUsername;
+	
+// 	req.checkBody('username', 'username is required').notEmpty();
+
+// 	var errors = validationErrors();
+
+// 	if(errors){
+// 		res.render('changepermission');
+// 	}else{
+		
+// 	}
+
+
+// });
+
 //homepage
 router.get('/palace',  function(req,res){
 	var loggedin = false;
