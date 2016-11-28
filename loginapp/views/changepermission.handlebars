@@ -24,15 +24,7 @@
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
 
-
-
 <h2>Check in check out</h2>
-{{#if errors}}
-      {{#each errors}}
-        <div class="alert alert-danger">{{msg}}</div>
-      {{/each}}
-{{/if}}
-
 <form method="post" action="/users/checkin">
 	<div class="form-group">
 		<label>Account Username</label><br>
@@ -42,12 +34,6 @@
 
 
 <h2>delete reservation</h2>
-{{#if errors}}
-      {{#each errors}}
-        <div class="alert alert-danger">{{msg}}</div>
-      {{/each}}
-{{/if}}
-
 <form method="post" action="/users/deletereservation">
 	<div class="form-group">
 		<label>Account Username</label><br>
@@ -57,17 +43,18 @@
 
 
 <h2>delete user</h2>
-{{#if errors}}
-      {{#each errors}}
-        <div class="alert alert-danger">{{msg}}</div>
-      {{/each}}
-{{/if}}
-
 <form method="post" action="/users/deleteuser">
 	<div class="form-group">
 		<label>Account Username</label><br>
 		<input type="text" class="form-control" name="username" placeholder="username"><br>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
-
-
+<!-- 
+<h2>Veiw User Reservation</h2>
+<form method="post" action="/users/viewreservation">
+	<div class="form-group">
+		<label>Account Username</label><br>
+		<input type="text" class="form-control" name="username" placeholder="username"><br>
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>
+ -->

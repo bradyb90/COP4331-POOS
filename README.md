@@ -39,7 +39,7 @@ by default the acccount type will be of level 1 so you must manually change your
 
 4) type: use loginapp
 
-5) past db.users.update({name:'test'}, { $set: { accountlevel: '3'} })
+5) paste "db.users.update({name:'test'}, { $set: { accountlevel: '3'} })"
 
 6) type "db.users.find()" your account with the name test should have accountlevel: 3 now
 

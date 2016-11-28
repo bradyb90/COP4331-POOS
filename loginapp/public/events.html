@@ -25,23 +25,16 @@
     </div>
     <div class="collapse navbar-collapse" id="collapsemenu">
       <ul class="nav navbar-nav">
-        {{#if user}}
-          <li><a href="/users/book">Book</a></li>
-          <li><a href="/">Dashboard</a></li>
-        {{else}}
-
-        {{/if}}
+        <li class="loggedin"><a href="/users/book">Book</a></li>
+        <li class="loggedin"><a href="/">Dashboard</a></li>
         <li><a href="/gallery.html">Gallery</a></li>
         <li><a href="/services.html">Services</a></li>
         <li><a href="/events.html">Events</a></li>              
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        {{#if user}}
-        <li><a href="/users/logout">Logout</a></li>
-        {{else}}
-          <li><a href="/users/register">Register</a></li>
-          <li><a href="/users/login">Login</a></li>
-        {{/if}}    
+        <li class="loggedin"><a href="/users/logout">Logout</a></li>
+        <li><a href="/users/register">Register</a></li>
+        <li><a href="/users/login">Login</a></li>
       </ul>
       </div>  
   </div>
@@ -58,7 +51,6 @@
             Formal dinner or casual cocktail party, Knight's Palace is here for you to host a rehearsal dinner. Our world-renowned hospitality and convenient planning resources to coordinate every detail can be trusted, from the guest list and accommodations down to the menu. Choose any wine or desserts that suits your needs, we can arrange a high quality meal to please any guest.
         </p>
     </div>
-    
     <div class="container col-xs-12" style="align:centered; margin-top:10px;">
         <h2>Ceremonies</h2>
         <p>
@@ -80,11 +72,15 @@
 </div><!-- content container -->
 
 <footer class="footer">
-    <div class="container">
-        <p class="">&copy; 2016 Team21. | <a href="http://www.cs.ucf.edu/~turgut/COURSES/COP4331C_OOD_Fall16/COP4331C_OOD_Fall16.html">COP4331C POOS Class </a></p>
-    </div>
-</footer>  
-    <script src="js/jquery-3.1.1.min.js"></script>
+        <div class="container">
+            <ul style="list-style: none;">
+              <li role="presentation" style="float: left;"><a href="http://www.cs.ucf.edu/~turgut/COURSES/COP4331C_OOD_Fall16/">&copy; 2016 Team21. | COP4331C UCF</a></li>
+              <li role="presentation" style="float: left;"><a href="/users/changepermission">&nbsp; manager</a></li>
+              <li role="presentation" style="float: left;"><a href="/users/checkin">&nbsp; receptionist</a></li>
+            </ul>
+        </div>
+    </footer> 
+        <script src="js/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="js/script.js"></script>

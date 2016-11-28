@@ -32,9 +32,19 @@ router.get('/checkin', isReceptionist, function(req,res){
 	res.render('checkin');
 });
 
+//checking in and out
+router.get('/viewreservation', isReceptionist, function(req,res){
+	res.render('/');
+});
+
 //homepage
 router.get('/palace',  function(req,res){
-	res.sendFile(path.join(__dirname + '/palace.html'));
+	var loggedin = false;
+	if(req.app.locals.user != null){
+		loggedin = true;
+	}
+
+	res.sendFile(path.join(__dirname + '/palace.html', loggedin));
 });
 
 //gallery link to html page

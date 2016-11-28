@@ -25,23 +25,16 @@
     </div>
     <div class="collapse navbar-collapse" id="collapsemenu">
       <ul class="nav navbar-nav">
-        {{#if user}}
-          <li><a href="/users/book">Book</a></li>
-          <li><a href="/">Dashboard</a></li>
-        {{else}}
-
-        {{/if}}
+        <li class="loggedin"><a href="/users/book">Book</a></li>
+        <li class="loggedin"><a href="/">Dashboard</a></li>
         <li><a href="/gallery.html">Gallery</a></li>
         <li><a href="/services.html">Services</a></li>
         <li><a href="/events.html">Events</a></li>              
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        {{#if user}}
-        <li><a href="/users/logout">Logout</a></li>
-        {{else}}
-          <li><a href="/users/register">Register</a></li>
-          <li><a href="/users/login">Login</a></li>
-        {{/if}}    
+        <li class="loggedin"><a href="/users/logout">Logout</a></li>
+        <li><a href="/users/register">Register</a></li>
+        <li><a href="/users/login">Login</a></li>
       </ul>
       </div>  
   </div>
